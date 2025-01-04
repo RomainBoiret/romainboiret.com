@@ -1,0 +1,7 @@
+{
+    "trailingComma": "es5",
+    "useTabs": true,
+    "singleQuote": true,
+    "endOfLine": "auto",
+    "htmlWhitespaceSensitivity": "ignore"
+}
