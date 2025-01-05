@@ -13,10 +13,10 @@
                     Innovation and creativity drive my daily life.
                 "
                 :social-medias="[
-                    { name: 'in/romain-boiret', link: '#', icon: 'bx bxl-linkedin' },
-                    { name: 'github.com/RomainBoiret', link: '#', icon: 'bx bxl-github' },
-                    { name: '@roma.brt', link: '#', icon: 'bx bxl-instagram-alt' },
-                    { name: 'romainboiret@gmail.com', link: '#', icon: 'bx bxl-gmail' },
+                    { name: 'in/romain-boiret', link: 'https://www.linkedin.com/in/romain-boiret-54b0ab286/', icon: 'bx bxl-linkedin' },
+                    { name: 'github.com/RomainBoiret', link: 'https://github.com/RomainBoiret', icon: 'bx bxl-github' },
+                    { name: '@roma.brt', link: 'https://www.instagram.com/roma.brt/?hl=fr', icon: 'bx bxl-instagram-alt' },
+                    { name: 'romain.boiret.1@ens.etsmtl.ca', link: 'mailto:romain.boiret.1@ens.etsmtl.ca', icon: 'bx bxl-gmail' },
                 ]"
             ></about-description>
         </div>

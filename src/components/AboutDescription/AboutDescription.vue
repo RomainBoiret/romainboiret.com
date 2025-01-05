@@ -9,7 +9,12 @@
         </p>
 
         <div class="about-description__social-media">
-            <a v-for="media in socialMedias" :key="media.name" :href="media.link" class="about-description__media">
+            <a class="about-description__media" 
+               v-for="media in socialMedias" 
+               :key="media.name" 
+               :href="media.link" 
+               target="_blank"
+            >
                 <i :class="media.icon"></i>{{ media.name }}
             </a>
         </div>
