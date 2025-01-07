@@ -20,6 +20,7 @@ const props = defineProps({
 <style lang="scss">  
 .skills-container {
     width: 100%;
+    background: #fff;
     display: flex;
     justify-content: space-between;
     padding: 80px 160px 0;

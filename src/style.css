@@ -11,6 +11,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --background: #fff;
+    --text-color: #000;
+}
+
 ::-webkit-scrollbar {
     width: 16px;
 }
@@ -26,7 +31,7 @@
 }
 
 body {
-    background: #fdfaf9;
+    background: var(--background, #fff);
     color: var(--text-color, #000);
     overflow-x: hidden;
     user-select: none;
