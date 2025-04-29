@@ -8,16 +8,21 @@
             {{ aboutDesc }}
         </p>
 
-        <div class="about-description__social-media">
-            <a class="about-description__media" 
+        <ul class="about-description__social-media">
+            <li class="about-description__media" 
                v-for="media in socialMedias" 
                :key="media.name" 
-               :href="media.link" 
-               target="_blank"
             >
-                <i :class="media.icon"></i>{{ media.name }}
-            </a>
-        </div>
+                <i :class="media.icon"></i>
+                <a 
+                    class="about-description__link" 
+                    :href="media.link" 
+                    target="_blank"
+                >
+                    {{ media.name }}
+                </a>
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -46,7 +51,7 @@ const props = defineProps({
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 25px;
     padding: 10px;
 
     @media (max-width: 768px) {
@@ -79,6 +84,23 @@ const props = defineProps({
         }
     }
 
+    .about-description__media {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .about-description__link {
+        color: #000;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .about-description__link:focus,
+    .about-description__link:hover {
+        text-decoration: 3px #588157 underline;
+    }
+
     .about-description__media i {
         color: #000;
         font-size: 25px;
@@ -86,15 +108,6 @@ const props = defineProps({
         border-radius: 50px;
         padding: 10px;
         transition: .2s;
-    }
-
-    .about-description__media {
-        color: #000;
-        font-size: 18px;
-        font-weight: 400;
-        display: flex;
-        align-items: center;
-        gap: 10px;
     }
 }
 </style>

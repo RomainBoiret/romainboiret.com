@@ -44,13 +44,18 @@ const props = defineProps({
 .game-project {
     width: 100%;
     height: 250px;
-    background: #e3e3e3;
+    background: #f5f5f5;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    transition: .1s;
+
+    &:hover {
+        background: #ebebeb;
+    }
 
     .game-project__header {
         width: 100%;
@@ -80,6 +85,10 @@ const props = defineProps({
     }
 
     .game-project__link:focus,
+    .game-project__link:hover {
+        border-bottom: 6px solid #6e8a71;
+    }
+
     .game-project__link:active {
         border-bottom: none;
     }

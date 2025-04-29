@@ -1,23 +1,17 @@
 <template>
     <div class="about-container">
         <div class="about-container__left-part">
-            <television></television>
+            <television
+                :image-link="imageLink"
+                :image-alt="imageAlt"
+            ></television>
         </div>
         
         <div class="about-container__right-part">
             <about-description
-                about-tag="Hi! I'm a student developper"
-                about-desc="
-                    Software engineering student at École de Technologie Supérieure, Montréal QC. 
-                    Passionate about programming, new technologies and social networks. 
-                    Innovation and creativity drive my daily life.
-                "
-                :social-medias="[
-                    { name: 'in/romain-boiret', link: 'https://www.linkedin.com/in/romain-boiret-54b0ab286/', icon: 'bx bxl-linkedin' },
-                    { name: 'github.com/RomainBoiret', link: 'https://github.com/RomainBoiret', icon: 'bx bxl-github' },
-                    { name: '@roma.brt', link: 'https://www.instagram.com/roma.brt/?hl=fr', icon: 'bx bxl-instagram-alt' },
-                    { name: 'romain.boiret.1@ens.etsmtl.ca', link: 'mailto:romain.boiret.1@ens.etsmtl.ca', icon: 'bx bxl-gmail' },
-                ]"
+                :about-tag="aboutTag"
+                :about-desc="aboutDesc"
+                :social-medias="socialMedias"
             ></about-description>
         </div>
     </div>
@@ -27,7 +21,26 @@
 import { defineProps } from 'vue';
 
 const props = defineProps({
-
+    aboutTag: {
+        type: String,
+        default: '',
+    },
+    aboutDesc: {
+        type: String,
+        default: '',
+    },
+    socialMedias:  {
+        type: Array,
+        default: () => [],
+    },
+    imageLink: {
+        type: String,
+        default: ''
+    },
+    imageAlt: {
+        type: String,
+        default: ''
+    },
 });
 </script>
 

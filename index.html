@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="src/style.css" />
+        <link rel="stylesheet" href="src/styles/main.css" />
+        <link rel="stylesheet" href="src/styles/utilities.css" />
         <link
             href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
             rel="stylesheet"
@@ -15,11 +16,10 @@
         <div id="app">
             <header-embed
                 logo-text="Portfolio."
-                logo-link-tag="#top"
+                logo-link-tag="https://romainboiret.com"
                 :links-tab="[
                     { name: 'Home', href: '#home' },
                     { name: 'About me', href: '#about' },
-                    { name: 'My tools', href: '#my-tools' },
                     { name: 'My projects', href: '#my-projects' },
                 ]"
                 :copy-btn-tab="{
@@ -52,34 +52,27 @@
                 padding="40px 20px"
             >
                 <h2>About me</h2>
-                <about-container></about-container>
-            </default-section>
-
-            <default-section
-                id="my-tools"
-                background-color="#fff"
-                height="auto"
-                padding="40x 20px"
-            >
-                <h2 style="margin-top: 40px;">My tools</h2>
-                <skills-container
-                    :icon-list="[
-                        { src: '/src/images/vue.jpg', alt: 'vue' },
-                        { src: '/src/images/javascript.jpg', alt: 'javascript' },
-                        { src: '/src/images/css.jpg', alt: 'css' },
-                        { src: '/src/images/node.jpg', alt: 'node' },
-                        { src: '/src/images/sql.jpg', alt: 'sql' },
-                        { src: '/src/images/c.jpg', alt: 'c' },
-                        { src: '/src/images/java.jpg', alt: 'java' },
-                        { src: '/src/images/python.jpg', alt: 'python' },
-                        { src: '/src/images/git.jpg', alt: 'git' },
+                <about-container
+                    about-tag="Hi! I'm a student developper"
+                    about-desc="
+                        Software engineering student at École de Technologie Supérieure, Montréal QC. 
+                        Passionate about programming, new technologies and social networks. 
+                        Innovation and creativity drive my daily life.
+                    "
+                    :social-medias="[
+                        { name: 'in/romain-boiret', link: 'https://www.linkedin.com/in/romain-boiret-54b0ab286/', icon: 'bx bxl-linkedin' },
+                        { name: 'github.com/RomainBoiret', link: 'https://github.com/RomainBoiret', icon: 'bx bxl-github' },
+                        { name: '@roma.brt', link: 'https://www.instagram.com/roma.brt/?hl=fr', icon: 'bx bxl-instagram-alt' },
+                        { name: 'romain.boiret.1@ens.etsmtl.ca', link: 'mailto:romain.boiret.1@ens.etsmtl.ca', icon: 'bx bxl-gmail' },
                     ]"
-                ></skills-container>
+                    image-link="/images/profile.jpg"
+                    image-alt="Romain"
+                ></about-container>
             </default-section>
 
             <default-section
                 id="my-projects"
-                background-color="#f0efeb"
+                background-color="#fdfaf9"
                 height="auto"
                 padding="0px 20px"
             >

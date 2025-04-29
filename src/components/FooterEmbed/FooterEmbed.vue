@@ -2,9 +2,9 @@
     <footer class="footer-embed">
         <p class="footer-embed__text">{{ footerText }}</p>
         
-        <div class="footer-embed__link">
-            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
-        </div>
+        <a href="#" class="footer-embed__link">
+            <i class='bx bx-up-arrow-alt'></i>
+        </a>
     </footer>
 </template>
   
@@ -26,7 +26,7 @@ const props = defineProps({
     align-items: center;
     flex-wrap: wrap;
     padding: 20px 160px;
-    background: var(--main-color);
+    background: #e5e5e5;
 
     @media (max-width: 768px) {
         flex-direction: column-reverse;
@@ -48,8 +48,8 @@ const props = defineProps({
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #8bb090;
-        border-bottom: 4px solid #6e8a71;
+        background: #6e8a71;
+        border-bottom: 4px solid #3a553a;
         border-radius: 10px;
         transition: .1s;
         cursor: pointer;
@@ -61,6 +61,10 @@ const props = defineProps({
     }
 
     .footer-embed__link:focus,
+    .footer-embed__link:hover {
+        border-bottom: 6px solid #3a553a;
+    }
+
     .footer-embed__link:active {
         border-bottom: none;
     }
