@@ -84,7 +84,7 @@ const copyToClipboard = async () => {
 <style lang="scss">
 .header-navbar {
     .header-navbar__navigation a,
-    .header-navbar__navigation button {
+    .header-navbar__navigation .header-navbar__copy-btn {
         text-decoration: none;
         color: #000;
         font-size: 18px;
@@ -98,8 +98,10 @@ const copyToClipboard = async () => {
         transition: 0.2s;
     }
 
+    .header-navbar__navigation a:focus,
     .header-navbar__navigation a:hover,
-    .header-navbar__navigation button:hover {
+    .header-navbar__navigation .header-navbar__copy-btn:focus,
+    .header-navbar__navigation .header-navbar__copy-btn:hover {
         background: #84a98c;
     }
 
@@ -152,7 +154,7 @@ const copyToClipboard = async () => {
             left: 0;
             width: 100%;
             height: auto;
-            background: #f6f6f6;
+            background: #ececec;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
             padding: 15px 10px;
@@ -166,21 +168,21 @@ const copyToClipboard = async () => {
         }
 
         .header-navbar__navigation a,
-        .header-navbar__navigation button {
+        .header-navbar__navigation .header-navbar__copy-btn {
             display: block;
             margin-left: 6px;
             margin-top: 10px;
             font-size: 20px;
             font-weight: 500;
-            color: #3e4042;
+            color: #000;
             border-radius: 0;
             transition: transform 0.25s ease;
         }
 
         .header-navbar__navigation a:hover,
-        .header-navbar__navigation button:hover {
+        .header-navbar__navigation .header-navbar__copy-btn:hover {
             background: none;
-            text-decoration: underline;
+            text-decoration: 3px #588157 underline;
         }
     }
 }

@@ -1,11 +1,17 @@
 <template>
     <div class="logo" ref="logo">
-        <a class="logo__tag" :href="logoLink" v-html="computedLetters"></a>
+        <a class="logo__tag"
+           :href="logoLink"
+           v-html="computedLetters"
+           @mouseenter="animateLogo"
+           @focus="animateLogo"
+           tabindex="0">
+        </a>
     </div>
 </template>
-  
+
 <script setup>
-import { ref, defineProps, computed, onMounted } from 'vue';
+import { ref, defineProps, computed } from 'vue';
 
 const props = defineProps({
     logoTag: {
@@ -24,25 +30,21 @@ const computedLetters = computed(() => {
     return props.logoTag.split('').map(letter => `<span>${letter}</span>`).join('');
 });
 
-onMounted(() => {
+function animateLogo() {
     const logoElement = logo.value;
-
     if (logoElement) {
         const spans = logoElement.querySelectorAll('span');
+        spans.forEach((span, index) => {
+            span.style.animation = `bounce 0.6s ease ${index * 0.1}s`;
 
-        logoElement.addEventListener('mouseenter', () => {
-            spans.forEach((span, index) => {
-                span.style.animation = `bounce 0.6s ease ${index * 0.1}s`;
-
-                span.addEventListener('animationend', () => {
-                    span.style.animation = 'none';
-                    span.offsetHeight;
-                    span.style.animation = '';
-                }, { once: true });
-            });
+            span.addEventListener('animationend', () => {
+                span.style.animation = 'none';
+                span.offsetHeight;
+                span.style.animation = '';
+            }, { once: true });
         });
     }
-});
+}
 </script>
 
 <style lang="scss">
@@ -53,6 +55,7 @@ onMounted(() => {
         font-weight: 700;
         user-select: none;
         cursor: pointer;
+        outline: none;
     }
 
     @keyframes bounce {
@@ -67,6 +70,10 @@ onMounted(() => {
     .logo__tag span {
         display: inline-block;
         transition: transform 0.3s ease;
+    }
+
+    .logo__tag:focus span {
+        animation: bounce 0.6s ease forwards;
     }
 }
 </style>

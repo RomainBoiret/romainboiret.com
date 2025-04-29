@@ -21,24 +21,28 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #e5e5e5;
+    background: var(--light, #e5e5e5);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #588157;
-    border: 4px solid #e5e5e5;
+    background: var(--accent-green, #588157);
+    border: 4px solid var(--light, #e5e5e5);
     border-radius: 25px;
 }
 
 body {
+<<<<<<< Updated upstream:src/style.css
     background: var(--background, #fff);
     color: var(--text-color, #000);
+=======
+    background: var(--cream, #fdfaf9);
+    color: var(--text-black, #000);
+>>>>>>> Stashed changes:src/styles/main.css
     overflow-x: hidden;
-    user-select: none;
 }
 
 h2 {
-    color: #000;
+    color: var(--text-black, #000);
     font-size: 50px;
     font-weight: 800;
     text-align: center;

@@ -1,6 +1,6 @@
 <template>
     <div class="header-embed">
-        <logo 
+        <logo
             :logo-tag="logoText" 
             :logo-link="logoLinkTag"
         ></logo>
@@ -8,7 +8,6 @@
         <header-navbar
             :links="linksTab"
             :copyBtn="copyBtnTab"
-            :colors="['#e94e77', '#f57c42', '#f8a5c2', '#9b59b6', '#2ecc71', '#8e735b', '#3498db']"
         ></header-navbar>
     </div>
 </template>

@@ -11,10 +11,7 @@ import HeaderNavbar from './components/HeaderNavbar/HeaderNavbar.vue';
 import Logo from './components/Logo/Logo.vue';
 import NamePart from './components/NamePart/NamePart.vue';
 import ProjectsContainer from './components/ProjectsContainer/ProjectsContainer.vue';
-import SkillIcons from './components/SkillIcons/SkillIcons.vue';
-import SkillsContainer from './components/SkillsContainer/SkillsContainer.vue';
 import Television from './components/Television/Television.vue';
-import Title from './components/Title/Title.vue';
 import UtilitiesProject from './components/UtilitiesProject/UtilitiesProject.vue';
 
 const app = createApp({});
@@ -30,10 +27,7 @@ app.component('header-navbar', HeaderNavbar);
 app.component('logo', Logo);
 app.component('name-part', NamePart);
 app.component('projects-container', ProjectsContainer);
-app.component('skill-icons', SkillIcons);
-app.component('skills-container', SkillsContainer);
 app.component('television', Television);
-app.component('title', Title);
 app.component('utilities-project', UtilitiesProject);
 
 app.mount('#app');

@@ -1,10 +1,10 @@
 <template>
     <div class="projects-container">
-        <ul class="project-selector">
-            <li @click="setActiveList('all')">All</li>
-            <li @click="setActiveList('games')">Games</li>
-            <li @click="setActiveList('utilities')">Utilities</li>
-        </ul>
+        <div class="project-selector">
+            <button class="project-selector__btn" @click="setActiveList('all')">All</button>
+            <button class="project-selector__btn" @click="setActiveList('games')">Games</button>
+            <button class="project-selector__btn" @click="setActiveList('utilities')">Utilities</button>
+        </div>
 
         <div class="project-list-container">
             <game-projects
@@ -62,9 +62,8 @@ const setActiveList = (list) => {
         justify-content: center;
         align-items: center;
         gap: 30px;
-        background: #e3e3e3;
+        background: #f5f5f5;
         border-radius: 15px;
-        list-style: none;
         padding: 20px 20px;
 
         @media (max-width: 768px) {
@@ -75,7 +74,7 @@ const setActiveList = (list) => {
         }   
     }
 
-    .project-selector li {
+    .project-selector .project-selector__btn {
         width: 120px;
         height: 50px;
         display: flex;
@@ -96,8 +95,13 @@ const setActiveList = (list) => {
         }   
     }
 
-    .project-selector li:focus,
-    .project-selector li:active {
+    .project-selector .project-selector__btn:focus,
+    .project-selector .project-selector__btn:hover {
+        background: #78a07e;
+        border-bottom: 7px solid #5e7461;
+    }
+
+    .project-selector .project-selector__btn:active {
         border-bottom: none;
     }
 
