@@ -31,13 +31,8 @@
 }
 
 body {
-<<<<<<< Updated upstream:src/style.css
-    background: var(--background, #fff);
-    color: var(--text-color, #000);
-=======
     background: var(--cream, #fdfaf9);
     color: var(--text-black, #000);
->>>>>>> Stashed changes:src/styles/main.css
     overflow-x: hidden;
 }
 
